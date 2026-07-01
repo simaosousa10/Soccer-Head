@@ -23,29 +23,28 @@ O projecto implementa uma partida rápida no mesmo teclado, com selecção de pe
 
 ## Demonstração
 
-### Selecção de personagens
-
-<p align="center">
-  <img src="docs/screenshots/character-selection.png" width="700" alt="Ecrã de selecção de personagens" />
-</p>
-
-### Início da partida
-
-<p align="center">
-  <img src="docs/screenshots/gameplay.png" width="700" alt="Partida local entre dois jogadores" />
-</p>
-
-### Partida com golo
-
-<p align="center">
-  <img src="docs/screenshots/gameplay-goal.png" width="700" alt="Partida com marcador actualizado" />
-</p>
-
-### Ecrã final
-
-<p align="center">
-  <img src="docs/screenshots/end-screen.png" width="700" alt="Ecrã final com vencedor" />
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <b>Selecção de personagens</b><br />
+      <img src="docs/screenshots/character-selection.png" width="400" alt="Ecrã de selecção de personagens" />
+    </td>
+    <td align="center">
+      <b>Início da partida</b><br />
+      <img src="docs/screenshots/gameplay.png" width="400" alt="Partida local entre dois jogadores" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Partida com golo</b><br />
+      <img src="docs/screenshots/gameplay-goal.png" width="400" alt="Partida com marcador actualizado" />
+    </td>
+    <td align="center">
+      <b>Ecrã final</b><br />
+      <img src="docs/screenshots/end-screen.png" width="400" alt="Ecrã final com vencedor" />
+    </td>
+  </tr>
+</table>
 
 ---
 
