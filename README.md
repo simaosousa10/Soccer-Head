@@ -23,22 +23,22 @@ O projecto implementa uma partida rápida no mesmo teclado, com selecção de pe
 
 ## Demonstração
 
-### Menu inicial
-
-<p align="center">
-  <img src="docs/screenshots/menu.png" width="700" alt="Menu inicial do Soccer Head" />
-</p>
-
 ### Selecção de personagens
 
 <p align="center">
   <img src="docs/screenshots/character-selection.png" width="700" alt="Ecrã de selecção de personagens" />
 </p>
 
-### Partida
+### Início da partida
 
 <p align="center">
   <img src="docs/screenshots/gameplay.png" width="700" alt="Partida local entre dois jogadores" />
+</p>
+
+### Partida com golo
+
+<p align="center">
+  <img src="docs/screenshots/gameplay-goal.png" width="700" alt="Partida com marcador actualizado" />
 </p>
 
 ### Ecrã final
