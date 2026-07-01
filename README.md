@@ -1,95 +1,128 @@
-# Cabeça Soccer
+# Soccer Head ⚽
 
-**Cabeça Soccer** é um jogo 2D local desenvolvido com Phaser para o TP2 de Phaser. O projecto implementa uma partida de futebol arcade para dois jogadores no mesmo teclado, com selecção de personagens, física de bola, golos, marcador, temporizador, prolongamento em caso de empate e ecrã final com opções para repetir a partida ou regressar ao menu.
+**Soccer Head** é um jogo 2D local desenvolvido com **Phaser**, inspirado em jogos arcade de futebol para dois jogadores.
 
-O repositório contém uma aplicação web estática: não existe processo de build, backend ou gestor de dependências configurado. O Phaser está incluído directamente no repositório através do ficheiro `phaser.min.js`.
+O projecto implementa uma partida rápida no mesmo teclado, com selecção de personagens, física de bola, colisões, golos, marcador, temporizador, prolongamento em caso de empate e ecrã final com opções para repetir a partida ou regressar ao menu.
 
-## Funcionalidades principais
+---
 
-- Menu inicial com opção para jogar e ver instruções.
-- Painel de instruções com os controlos de cada jogador.
-- Ecrã de selecção de personagens para Jogador 1 e Jogador 2.
-- Oito personagens disponíveis, com sprites e animações.
-- Jogo local para dois jogadores no mesmo teclado.
-- Movimento, salto e remate para ambos os jogadores.
-- Bola com física Arcade, colisões e ressaltos.
-- Balizas com detecção de golo.
-- Marcador para os dois jogadores.
-- Temporizador de 60 segundos.
-- Prolongamento quando a partida termina empatada.
-- Ecrã de fim de jogo com personagem vencedora, botão para jogar novamente e botão para voltar ao menu.
+## Funcionalidades
+
+* Menu inicial com opção para jogar e consultar instruções;
+* selecção de personagens para os dois jogadores;
+* oito personagens disponíveis com sprites e animações;
+* modo local para dois jogadores no mesmo teclado;
+* movimento, salto e remate para ambos os jogadores;
+* bola com física Arcade, colisões e ressaltos;
+* balizas com detecção de golo;
+* marcador e temporizador de 60 segundos;
+* prolongamento automático em caso de empate;
+* ecrã final com vencedor, opção para repetir a partida e voltar ao menu.
+
+---
+
+## Demonstração
+
+### Menu inicial
+
+<p align="center">
+  <img src="docs/screenshots/menu.png" width="700" alt="Menu inicial do Soccer Head" />
+</p>
+
+### Selecção de personagens
+
+<p align="center">
+  <img src="docs/screenshots/character-selection.png" width="700" alt="Ecrã de selecção de personagens" />
+</p>
+
+### Partida
+
+<p align="center">
+  <img src="docs/screenshots/gameplay.png" width="700" alt="Partida local entre dois jogadores" />
+</p>
+
+### Ecrã final
+
+<p align="center">
+  <img src="docs/screenshots/end-screen.png" width="700" alt="Ecrã final com vencedor" />
+</p>
+
+---
 
 ## Controlos
 
-| Jogador | Movimento | Saltar | Rematar |
-| --- | --- | --- | --- |
-| Jogador 1 | `A` / `D` | `W` | `S` |
+| Jogador   | Movimento              | Saltar         | Rematar         |
+| --------- | ---------------------- | -------------- | --------------- |
+| Jogador 1 | `A` / `D`              | `W`            | `S`             |
 | Jogador 2 | Setas esquerda/direita | Seta para cima | Seta para baixo |
 
-## Tecnologias usadas
-
-- **HTML5**: estrutura da página do jogo.
-- **JavaScript**: lógica das cenas, estados e mecânicas.
-- **Phaser**: motor de jogo 2D usado para renderização, cenas, input, animações e física.
-- **Phaser Arcade Physics**: gravidade, colisões, bola, jogadores, chão e balizas.
-- **Assets PNG/JPG**: personagens, cenário, botões, bola, balizas e elementos visuais.
+---
 
 ## Arquitectura
 
-O jogo está organizado em cenas Phaser:
-
-- `Cena1`: pré-carregamento dos assets e criação das animações das personagens.
-- `CenaMenu`: menu inicial e painel de instruções.
-- `CenaSelecao`: escolha das personagens para os dois jogadores.
-- `Cena2`: cena principal da partida, com física, controlos, golos, marcador, temporizador e prolongamento.
-- `CenaFim`: ecrã de fim de jogo, vencedor e navegação para repetir ou voltar ao menu.
-
-O ficheiro `game.js` inicializa o jogo Phaser com resolução `800x600`, activa a física Arcade e regista as cenas principais.
-
-## Estrutura de pastas
+O jogo está organizado em cenas Phaser, separando o menu, instruções, selecção de personagens, partida e ecrã final.
 
 ```text
 .
-├── Assets/              # Imagens, botões, estádio, bola, balizas e sprites das personagens
-├── cenas/               # Cenas Phaser do menu, selecção, jogo e fim de jogo
-├── game.js              # Configuração principal do Phaser e variáveis globais do jogo
-├── index.html           # Página HTML que carrega Phaser e os scripts do jogo
-├── phaser.min.js        # Biblioteca Phaser incluída localmente
-└── .gitattributes
+├── Assets/              # Imagens, personagens, bola, balizas, botões e cenário
+├── cenas/               # Cenas Phaser do jogo
+├── game.js              # Configuração principal do Phaser
+├── index.html           # Página HTML principal
+└── phaser.min.js        # Biblioteca Phaser incluída localmente
 ```
+
+### Cenas principais
+
+| Cena          | Responsabilidade                                           |
+| ------------- | ---------------------------------------------------------- |
+| `Cena1`       | Carregamento de assets e criação das animações.            |
+| `CenaMenu`    | Menu inicial e instruções.                                 |
+| `CenaSelecao` | Escolha das personagens dos jogadores.                     |
+| `Cena2`       | Lógica principal da partida, física, golos e temporizador. |
+| `CenaFim`     | Ecrã final, vencedor e navegação.                          |
+
+---
+
+## Tecnologias
+
+* **HTML5** — estrutura da aplicação;
+* **JavaScript** — lógica do jogo e controlo das cenas;
+* **Phaser** — motor 2D para renderização, input, animações e física;
+* **Phaser Arcade Physics** — colisões, gravidade, bola, jogadores e balizas;
+* **Assets PNG/JPG** — personagens, cenário, botões e elementos visuais.
+
+---
 
 ## Como executar
 
-Como o projecto carrega scripts e assets locais, recomenda-se executar através de um servidor HTTP estático a partir da raiz do repositório.
+O projecto é uma aplicação web estática. Não tem backend, processo de build ou gestor de dependências configurado.
 
-Com Python:
+A partir da raiz do repositório, correr:
 
 ```bash
 python -m http.server 8000
 ```
 
-Depois, abrir no browser:
+Depois abrir no browser:
 
 ```text
 http://localhost:8000
 ```
 
-Também pode ser usado qualquer outro servidor estático, por exemplo a extensão Live Server do VS Code.
+Também pode ser usado qualquer servidor HTTP estático, como a extensão **Live Server** do VS Code.
 
-Nota: em ambientes sensíveis a maiúsculas/minúsculas, confirme que os caminhos usados no `index.html` correspondem ao nome real da pasta das cenas.
+> Em sistemas sensíveis a maiúsculas/minúsculas, confirma que os caminhos no `index.html` correspondem exactamente aos nomes das pastas e ficheiros.
 
-## Variáveis de ambiente
-
-Não foram identificadas variáveis de ambiente no código. A aplicação é estática e não depende de configuração externa para arrancar.
-
-## Screenshots
-
-Não foi encontrada uma pasta `docs/screenshots` neste repositório. Por isso, este README não inclui capturas de ecrã.
+---
 
 ## Estado do projecto
 
-Projecto académico desenvolvido para o TP2 de Phaser. A implementação presente no repositório cobre a estrutura base de um jogo Phaser com cenas, assets, animações, física Arcade e jogabilidade local para dois jogadores.
+Projecto académico desenvolvido para o **TP2 de Phaser**.
+
+A versão actual implementa a estrutura completa de um jogo arcade local, incluindo cenas, assets, animações, física, jogabilidade para dois jogadores, marcador, temporizador e ecrã final.
+
+---
 
 ## Autor
 
-- [simaosousa10](https://github.com/simaosousa10)
+* [Simão Sousa](https://github.com/simaosousa10)
